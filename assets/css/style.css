@@ -1,0 +1,205 @@
+:root {
+  --text: #fff;
+  --header-contrast: #1889c2;
+  --border: #475669;
+  --primary: #173b4d;
+  --secondary: #7b8a99;
+  --tertiary: #13293d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: var(--tertiary);
+  color: var(--text);
+  height: auto;
+  font-size: 32px;
+  text-align: center;
+  border-bottom: 10px solid var(--border);
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  list-style: none;
+}
+
+nav a {
+  color: var(--text);
+  font-weight: bold;
+  font-size: 32px;
+  text-decoration: none;
+  margin: 16px;
+  padding-bottom: 3px;
+  border-bottom: 5px solid var(--border);
+}
+
+main {
+  border-top: px solid var(--border);
+  background-color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.chapter {
+  background-color: var(--primary);
+  margin: 30px;
+  color: var(--text);
+  border: 5px solid var(--border);
+}
+
+.chapter p {
+  margin: 15px;
+}
+
+.chapter h2 {
+  position: relative;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid var(--border);
+  width: fit-content;
+  background-color: var(--primary);
+  text-align: center;
+  margin-top: -20px;
+  height: fit-content;
+}
+
+#previous-work {
+  background-color: transparent;
+  border: none;
+}
+
+#card-box {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  flex: 1 0 45%;
+  height: 450px;
+  /* Temporary background color */
+  background-color: #000;
+  border: 5px solid var(--border);
+  margin: 15px;
+  display: flex;
+  justify-content: right;
+}
+
+.card h3 {
+  align-self: flex-end;
+  margin: 30px;
+  padding: 15px;
+  background-color: var(--primary);
+  color: var(--text);
+  border: 5px solid var(--border);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.featured {
+  flex: 1 0 95%;
+  height: 600px;
+}
+
+#project-one {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1F8b692Vly59YUAjXjjp14DXchZhx-SfohA&s");
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#project-two {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("https://images.pexels.com/photos/270366/pexels-photo-270366.jpeg");
+  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#project-three {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDv-X0ulujX_HWVh736uFMxXcpgZZ-t3IveA&s");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#project-four {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsHV9wDFtkkVpBHLvd5bdF4qG_3boud55vGQ&s");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#project-five {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("https://cdn12.picryl.com/photo/2016/12/31/work-in-progress-safety-work-sand-2c76af-1024.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+#contacts ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+#contacts li {
+  margin: 15px;
+  justify-content: center;
+}
+
+#hero {
+  height: 300px;
+  /* Temporary background color */
+  /* TODO: Add a background image */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url("https://upload.wikimedia.org/wikipedia/commons/e/ef/Programming_code.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #000;
+  display: flex;
+  justify-content: right;
+  background-size: 100%;
+}
+
+#hero h2 {
+  align-self: flex-end;
+  margin: 30px;
+  padding: 15px;
+  background-color: var(--primary);
+  color: var(--text);
+  border: 5px solid var(--border);
+  border-radius: 15px;
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  main,
+  header nav ul,
+  #card-holder,
+  header {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav a {
+    border-bottom: none;
+  }
+}
